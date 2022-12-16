@@ -1,0 +1,61 @@
+body {
+  background: #f7f9fd;
+}
+.gm-style .gm-style-iw-d * {
+  background-color: #243656;
+}
+
+.gm-style .gm-style-iw-d div {
+  color: #fff;
+}
+
+.gm-style .gm-style-iw-c {
+  /* padding-right: 10px !important;
+  padding-bottom: 0px !important;
+  max-width: 500px !important;
+  max-height: 326px !important;
+  min-width: 0px !important;
+  box-sizing: border-box;
+  transform: translate(-50%, -100%);
+  background-color: #dd9191;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
+  visibility: hidden; */
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #243656;
+
+  /* Position the tooltip text */
+  z-index: 1;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 0 !important;
+}
+
+.gm-style .gm-style-iw-c .gm-ui-hover-effect {
+  display: none !important;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track,
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece {
+  background-color: #243656;
+}
+
+.gm-style .gm-style-iw-t::after {
+  background: linear-gradient(
+    45deg,
+    #243656 50%,
+    rgba(255, 255, 255, 0) 51%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.gmnoprint,
+.gm-svpc,
+.gm-style-cc {
+  display: none;
+}
+
+.gm-bundled-control-on-bottom {
+  display: block !important;
+}
