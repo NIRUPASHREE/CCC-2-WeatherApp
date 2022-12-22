@@ -13,16 +13,8 @@ import type { DailyWeatherDataProps } from '../molecules/DailyWeather';
 import { DailyWeather } from '../molecules/DailyWeather';
 import { Loading } from '../atom/Loading';
 
-export interface LatAndLng {
-  lat: number;
-  lng: number;
-  setLat: (val: number) => void;
-  setLng: (val: number) => void;
-  setCity: (val: string) => void;
-}
-
 export const Homepage: FC = () => {
-  const [lat, setLat] = useState(35.6895); 
+  const [lat, setLat] = useState(35.6895);
   const [lng, setLng] = useState(139.6917);
   const [loading, setLoading] = useState(false);
   const [currentActive, setCurrentActive] = useState(-1);
@@ -84,7 +76,7 @@ export const Homepage: FC = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row justify-around">
+      <div className="flex flex-row justify-between px-24">
         <div className="flex flex-col">
           <Header />
           <div className="pt-4">
@@ -107,13 +99,15 @@ export const Homepage: FC = () => {
             )}
           </div>
         </div>
-        <GoogleMapDisplay
-          setLat={(e): void => setLat(e)}
-          setLng={(e): void => setLng(e)}
-          lat={lat}
-          lng={lng}
-          setCity={(e): void => setCity(e)}
-        />
+        <div>
+          <GoogleMapDisplay
+            setLat={(e): void => setLat(e)}
+            setLng={(e): void => setLng(e)}
+            lat={lat}
+            lng={lng}
+            setCity={(e): void => setCity(e)}
+          />
+        </div>
       </div>
       <div className="flex flex-row justify-around pt-4">
         {hourlyWeatherData.length > 0 ? (

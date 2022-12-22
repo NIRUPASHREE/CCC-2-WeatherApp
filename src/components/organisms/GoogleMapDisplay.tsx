@@ -4,17 +4,24 @@ import { useMemo } from 'react';
 import { useEffect } from 'react';
 import React, { useCallback, useState } from 'react';
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-import type { LatAndLng } from '../page/Homepage';
 import { SearchBar } from './SearchBar';
 
 const containerStyle = {
   width: '700px',
   height: '300px',
   borderRadius: '12px',
-  boxShadow: '2px 2px 4px 4px lightGrey'
+  boxShadow: '2px 2px 4px 4px lightGrey',
 };
 
-export const GoogleMapDisplay: FC<LatAndLng> = ({
+export interface GoogleMapProps {
+  lat: number;
+  lng: number;
+  setLat: (val: number) => void;
+  setLng: (val: number) => void;
+  setCity: (val: string) => void;
+}
+
+export const GoogleMapDisplay: FC<GoogleMapProps> = ({
   lat,
   lng,
   setLat,
@@ -56,7 +63,7 @@ export const GoogleMapDisplay: FC<LatAndLng> = ({
 
   return isLoaded ? (
     <div className="pt-9">
-      {showMap && (
+      {showMap ? (
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
@@ -72,9 +79,11 @@ export const GoogleMapDisplay: FC<LatAndLng> = ({
             />
           </div>
         </GoogleMap>
+      ) : (
+        <div>Google Map is loading....</div>
       )}
     </div>
   ) : (
-    <div className="w-3/5" />
+    <></>
   );
 };

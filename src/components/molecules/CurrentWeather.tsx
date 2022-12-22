@@ -37,7 +37,7 @@ export const CurrentWeather: FC<CurrentWeatherDataProps> = ({
   return (
     <div className="flex w-96 flex-col items-start rounded-xl bg-slate-100 p-4 text-base shadow-xl shadow-slate-300">
       <div className="flex flex-col items-start pt-5">
-        <div className="pl-2 text-orange-600">
+        <div className="text-orange-600">
           {DateTimeConverter(dt, 'MMM DD, h:mm a')}
         </div>
         <div className="flex flex-row items-center justify-center">
@@ -48,14 +48,16 @@ export const CurrentWeather: FC<CurrentWeatherDataProps> = ({
             width="54"
           />
           <div className="w-full pt-2 pl-2 text-2xl font-semibold text-slate-600">
-            {temp}°C
+            {temp.toFixed()}°C
           </div>
         </div>
       </div>
       <div className="font-medium">
         Feels like {`${feels_like}°C`}. {weather[0].description}.
       </div>
-      <div className=" font-serif text-xl font-semibold text-slate-500">{city}</div>
+      <div className=" font-serif text-xl font-semibold text-slate-500">
+        {city}
+      </div>
       <div className="grid grid-cols-2 gap-x-4 py-4">
         <div>Sunrise: {DateTimeConverter(sunrise, 'h:mm:ss a')}</div>
         <div>Sunset: {DateTimeConverter(sunset, 'h:mm:ss a')}</div>
