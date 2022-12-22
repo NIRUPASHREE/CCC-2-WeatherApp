@@ -39,7 +39,7 @@ export const HourlyWeather: FC<HourlyWeatherDataProps> = ({ data }) => {
       <div className="font-serif text-xl font-semibold text-slate-600">
         Forecast for next 8 hours
       </div>
-      <Line {...config} className="pt-4" />
+      <Line {...config} className="rounded pt-4 shadow-xl shadow-slate-200" />
     </div>
   );
 };

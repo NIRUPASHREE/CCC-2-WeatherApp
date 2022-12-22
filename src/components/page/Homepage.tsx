@@ -36,7 +36,7 @@ export const Homepage: FC = () => {
         if (data !== null) {
           if (data.current !== null) setCurrentWeatherData(data.current);
           if (data.daily !== null && data.daily.length > 0)
-            setDailyWeatherData(data.daily);
+            setDailyWeatherData(data.daily.slice(1,));
           if (data.hourly !== null && data.hourly.length > 0) {
             if (data.hourly.length > 8) {
               const slicedData = data.hourly.slice(1, 9);

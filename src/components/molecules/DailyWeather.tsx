@@ -23,8 +23,8 @@ export const DailyWeather: FC<DailyWeatherDataProps> = ({
   active,
 }) => {
   return (
-    <div className="flex flex-col rounded bg-slate-300 text-sm shadow-2xl shadow-slate-500 duration-300 ease-in-out hover:scale-110">
-      <div className="flex flex-row items-center justify-center text-sm text-black">
+    <div className="flex flex-col rounded bg-slate-200 text-sm shadow-2xl shadow-slate-500 duration-300 ease-in-out hover:scale-110">
+      <div className="flex flex-row items-center justify-center pt-2 text-black">
         <div>{DateTimeConverter(dt, 'MMM DD')}</div>
         <img
           src={`http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
@@ -35,9 +35,7 @@ export const DailyWeather: FC<DailyWeatherDataProps> = ({
         <div className="pl-4">{`${temp.min.toFixed()}°C / ${temp.max.toFixed()}°C`}</div>
       </div>
       {active && (
-        <div className="text-center">
-          Day Summary: {weather[0].description}
-        </div>
+        <div className="text-center">Day Summary: {weather[0].description}</div>
       )}
     </div>
   );
