@@ -1,3 +1,7 @@
+# this is a Weather Display Application
+<img width="1440" alt="Screenshot 2023-01-05 at 11 26 16 AM" src="https://user-images.githubusercontent.com/51870577/210690905-dbed18c2-5f51-4355-8d2a-781ae430c2ce.png">
+
+
 # React Tailwindcss Storybook Boilerplate build with Vite
 
 This is a [ReactJS](https://reactjs.org) + [Vite](https://vitejs.dev) boilerplate to be used with [Tailwindcss](https://tailwindcss.com) and [Storybook](https://storybook.js.org/).
